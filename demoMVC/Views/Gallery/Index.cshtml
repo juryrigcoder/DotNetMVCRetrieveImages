@@ -1,0 +1,8 @@
+﻿@model demoMVC.Models.GalleryModel
+
+@{
+    foreach (var str in Model.Images)
+    {
+        <img src ="@Url.Action("GetImg","Gallery", new {fileName = str})"/>
+    }
+}
